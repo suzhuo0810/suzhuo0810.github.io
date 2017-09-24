@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.apache.ibatis.submitted.rounding.Mapper">
+	<select id="login_Select" resultType="com.spring.model.user_Model" parameterType="java.util.Map">
+		select * from user where userName=#{userName} and userPass=#{userPass}
+	</select>
+	<update id="long_Update" parameterType="java.util.Map">
+		update user set userLogDate = #{userLogDate} where userId = #{userId};
+	</update>
+	<select id="all_Select" resultType="com.spring.model.user_Model">
+		select * from user
+	</select>
+	<insert id="add_User" parameterType="com.spring.model.user_Model" statementType="PREPARED">
+		insert into user (userName,userPass,userTitle,userNowDate,userLogDate) 
+		values (#{userName},#{userPass},#{userTitle},#{userNowDate},#{userLogDate})
+	</insert>
+	<delete id="del_User" parameterType="com.spring.model.user_Model" statementType="PREPARED">
+		delete from user where userId = #{userId}
+	</delete>
+	<update id="up_User" parameterType="com.spring.model.user_Model" statementType="PREPARED">
+		update user set userPass = #{userPass},userTitle = #{userTitle} where userName = #{userName}
+	</update>
+	
+	
+	
+	<insert id="add_Dow" parameterType="com.spring.model.dow_Model" statementType="PREPARED">
+		insert into dowexcel (dowName,dowText,dowIp,dowSystem,dwoExp,dowDate) 
+		values (#{dowName},#{dowText},#{dowIp},#{dowSystem},#{dwoExp},#{dowDate})
+	</insert>
+	<select id="all_Dow" resultType="com.spring.model.dow_Model">
+		select * from dowexcel
+	</select>
+	<delete id="del_Dow" parameterType="com.spring.model.dow_Model" statementType="PREPARED">
+		delete from dowexcel where dowId = #{dowId}
+	</delete>
+	
+	
+	
+	<select id="all_Student" resultType="com.spring.model.student_Model">
+		select * from student
+	</select>
+	<insert id="add_Student" parameterType="com.spring.model.student_Model" statementType="PREPARED">
+		insert into student (studentNumber,studentName,studentCard,studentSex,studentTie,studentDate) 
+		values (#{studentNumber},#{studentName},#{studentCard},#{studentSex},#{studentTie},#{studentDate})
+	</insert>
+	<delete id="del_Student" parameterType="com.spring.model.student_Model" statementType="PREPARED">
+		delete from student where studentNumber = #{studentNumber}
+	</delete>
+	<update id="up_Student" parameterType="com.spring.model.student_Model" statementType="PREPARED">
+		update student set studentName = #{studentName},studentCard = #{studentCard},
+		studentSex = #{studentSex},studentTie  = #{studentTie},studentDate = #{studentDate} where studentNumber = #{studentNumber}
+	</update>
+</mapper>

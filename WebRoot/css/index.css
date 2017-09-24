@@ -1,0 +1,90 @@
+*{  
+   	margin: 0;  
+    padding: 0;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;  
+     box-sizing: border-box;  
+}  
+html{  
+     min-height: 100%;  
+     height:100%;  
+     height:100%;  
+}  
+body{  
+     min-height: 100%;  
+     height:100%;  
+     height:100%;  
+}  
+#mydiv img{
+	 width: 100%;
+	 padding-top: 2%;
+	 height: 70%;
+}
+#spanName,#spanPass{
+	position:absolute;
+	top:31.5%;
+	left:41%;
+	font-size: 20px;
+	font-family: serif;
+	color: #00BFFF;
+}
+#spanPass{
+	top:46.5%;
+}
+#userName,#userPass,#submit{
+	outline:none;
+	border-style:none;
+	position:absolute;
+	top:30%;
+	left:40%;
+	width: 300px;
+	height: 45px;
+	border-top:3px solid #00BFFF;
+	border-bottom:3px solid #00BFFF;
+	font-size: 20px;
+	font-family: serif;
+}
+#userPass{
+	top:45%;
+}
+#submit{
+	border-style: none;
+	background-color:#00BFFF;
+	top:60%;
+	letter-spacing:20px;
+	color: #fff;
+}
+#ico{
+	font-size: 20px;
+	font-family: serif;
+	color:#00BFFF;
+	margin-left: 28%;
+	margin-top: -3%;
+}
+#title{
+	font-size: 35px;
+	font-family: serif;
+	color:#00BFFF;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+#error{
+	font-size: 25px;
+	font-family: serif;
+	color:#00BFFF;
+	margin-left: 38%;
+	margin-top: -1%;
+	opacity:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
