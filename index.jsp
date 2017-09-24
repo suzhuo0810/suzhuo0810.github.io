@@ -9,7 +9,7 @@
   <div id="title"> Welcome users Login</div>
   <div id="mydiv">
   <div id="error"> 用户名或密码错误 请重新输入</div>
-  	<img src="imgs/pean.jpg" />
+  	<img src="WebRoot/imgs/pean.jpg" />
   	<form action="login_Select.do" method="post">
   		<input id="userName" type="text" name="userName" /><span id="spanName">用户名</span><br/>
   		<input id="userPass" type="password" name="userPass" /><span id="spanPass">密码</span><br/>
@@ -24,6 +24,6 @@
   
   
   <link rel="stylesheet" href="css/index.css" type="text/css" />
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="WebRoot/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript"  src="WebRoot/js/index.js"></script>
 </html>
